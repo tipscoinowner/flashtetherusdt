@@ -1,25 +1,5 @@
 #!/usr/bin/env bash
-
-
 set -euo pipefail
-
-# -------------------------
-# LOAD ENVIRONMENT VARIABLES FROM .env IF EXISTS
-# -------------------------
-if [ -f .env ]; then
-  set -o allexport
-  source .env
-  set +o allexport
-fi
-
-# -------------------------
-# LOAD ENVIRONMENT VARIABLES FROM .env IF EXISTS
-# -------------------------
-if [ -f .env ]; then
-  set -o allexport
-  source .env
-  set +o allexport
-fi
 
 # -------------------------
 # CONFIGURE BEFORE RUNNING
@@ -36,8 +16,8 @@ fi
 # export PRIVATE_KEY="your_private_key_here"
 # export INITIAL_OWNER="TMCUDVJ1r63QH7dvccpdUXgkEEDFRDd8wP"
 #
-# Or edit the variables below direkt olarak düzenlenebilir (PRIVATE_KEY için önerilmez).
-# Artık değişkenler .env dosyasından veya ortamdan yüklenir.
+# Or edit the variables below directly (not recommended for PRIVATE_KEY).
+
 GITHUB_USER_OR_ORG="${GITHUB_USER_OR_ORG:-YOUR_GITHUB_USER_OR_ORG}"
 GITHUB_REPO="${GITHUB_REPO:-flashtether-trc20}"
 PRIVATE_KEY="${PRIVATE_KEY:-}"
